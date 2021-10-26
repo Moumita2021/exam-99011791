@@ -1,5 +1,4 @@
-FROM java:8
-	COPY . /var/www/java
-	WORKDIR /var/www/java
-	RUN javac Hell.java
-	CMD ["java","Hello"]
+FROM nginx-alpine
+Run mkdir/app
+COPY . /app/
+WORKDIR /app
