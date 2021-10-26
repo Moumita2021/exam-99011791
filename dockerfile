@@ -1,4 +1,7 @@
 FROM nginx-alpine
-Run mkdir/app
-COPY . /app/
-WORKDIR /app
+Run mkdir/usr
+COPY . /usr/share/nginx/html
+WORKDIR /usr
+RUN npm install
+EXPOSE 8080
+CMD ["npm","start"]
